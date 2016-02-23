@@ -1,0 +1,17 @@
+'''
+computes pay for overtime and normal hours
+
+'''
+
+def computepay(h,r):
+    hrs = float(h)
+    rate = float(r)
+    if hrs > 40:
+        return ((rate * 1.5) * (hrs - 40)) + (40 * rate)
+    else:
+        return float(hrs) * float(rate)
+
+h = raw_input("Enter Hours:")
+r = raw_input("Enter Rate:")
+p = computepay(h,r)
+print "Pay",p

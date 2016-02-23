@@ -1,0 +1,23 @@
+'''
+Exercise 5.2 
+'''
+list = []
+
+print "Please enter numeric values. When finished; enter 'done.'"
+
+while True:
+    try:
+        user_guess = raw_input('Enter a number: ')
+        if user_guess == 'done':
+            total = sum(list)
+            maximum = max(list)
+            minimum = min(list)
+            print 'The total is:',total
+            print 'The maximum is:',maximum
+            print 'The minimum is:',minimum
+            break
+        else:
+            list.append(int(user_guess))
+            # print list
+    except:
+        print 'Please enter a number.'

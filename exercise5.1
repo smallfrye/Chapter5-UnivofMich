@@ -1,0 +1,23 @@
+'''
+Exercise 5.1 
+'''
+list = []
+
+
+while True:
+    try:
+        print "Please enter numeric values. When finished; enter 'done.'"
+        user_guess = raw_input('Enter a number: ')
+        if user_guess == 'done':
+            total = sum(list)
+            avg = sum(list) / int(len(list))
+            count = len(list)
+            print 'The total is:',total
+            print 'The average is:',avg
+            print 'The count is:',count
+            break
+        else:
+            list.append(int(user_guess))
+            # print list
+    except:
+        print 'Please enter a number.'
